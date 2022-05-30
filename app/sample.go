@@ -24,6 +24,7 @@ func IsInteger(unknown interface{}) (bool, error) {
 }
 
 func IntToDayName(number int) (string) {
+	emptyString := ""  //"input angka tidak sesuai "
 	days := []string{"senin", "selasa", "rabu", "kamis", "jumat", "sabtu", "minggu"}
 	if number > 0  {
 		numberDays := number - 1
@@ -32,10 +33,10 @@ func IntToDayName(number int) (string) {
 			return days[numberDays]
 		}
 
-		return "input angka tidak sesuai "
+		return emptyString
 	}
 	
-	return "input angka tidak sesuai"
+	return emptyString
 
 }
 
@@ -51,39 +52,12 @@ func DayNameToInt(daysName string ) (int) {
 		"minggu": 7,
 	}
 
-	switch(daysNameLower) {
-		case "senin":
-			return days[daysNameLower]
-		case "selasa":
-			return days[daysNameLower]
-		case "rabu":
-			return days[daysNameLower]
-		case "kamis":
-			return days[daysNameLower]
-		case "jumat":
-			return days[daysNameLower]
-		case "sabtu":
-			return days[daysNameLower]
-		case "minggu":
-			return days[daysNameLower]
-		default:
-			return 0
-  }
-
+	return days[daysNameLower]
 	
 }
 
-// func IsiHello(input string) (string) {
-// 	var typeData interface{} = reflect.TypeOf(input)
-// 	typeDataInput := fmt.Sprintf("%v", typeData)
-// 	return typeDataInput
-// 	// check
-// 	// if input  {
-// 	// 	return "hello world 1"
-// 	// }
-
-// 	// return "hello world"
-
-// }
+func IsiHello(input *string) {
+	*input = "hello world"
+}
 
 

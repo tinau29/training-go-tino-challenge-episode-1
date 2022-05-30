@@ -24,8 +24,8 @@ func main() {
    log.Println(app.DayNameToInt(daysName))
 
    // Task 5 
-   // var kosong string
-   // app.IsiHello(&kosong)
-   // log.Println(kosong)
+   var kosong string
+   app.IsiHello(&kosong)
+   log.Println(kosong)
 }
 
