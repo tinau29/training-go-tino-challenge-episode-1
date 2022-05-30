@@ -20,7 +20,7 @@ func IsInteger(unknown interface{}) (bool, error) {
 		
 	}
 
-	return false, errors.New("Bukan Data Integer")
+	return false, errors.New("Bukan Integer")
 }
 
 func IntToDayName(number int) (string) {
